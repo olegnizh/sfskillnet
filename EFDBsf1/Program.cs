@@ -25,7 +25,8 @@ namespace EFDBsf1
 
                 db.SaveChanges();
 
-                var users = db.Users.ToList();
+                //var users = db.Users.ToList();
+                var users = db.Users.Where(user => user.Role == "Admin").ToList();
                 foreach (var user in users)
                 {
                     // Вывод Id пользователей
