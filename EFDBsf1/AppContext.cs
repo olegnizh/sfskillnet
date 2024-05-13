@@ -20,7 +20,7 @@ namespace EFDBsf1
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {			
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=test1;Trusted_Connection=True;");  
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=u111;Trusted_Connection=True;");  
 
         }
     }
