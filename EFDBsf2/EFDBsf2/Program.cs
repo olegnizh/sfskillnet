@@ -1,7 +1,7 @@
 ﻿using EFDBsf2.Models;
 using Microsoft.EntityFrameworkCore;
 
-//AddUsers();
+AddUsers();
 
 // Создаем контекст для выбора данных
 using (var db = new EFDBsf2.AppContext())
@@ -25,6 +25,7 @@ static void AddUsers()
     // Использование EF
     using (var db = new EFDBsf2.AppContext())
     {
+        db.Database.EnsureDeleted();
         db.Database.EnsureCreated();
 
         // Заполняем данными
